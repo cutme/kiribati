@@ -1,0 +1,147 @@
+button,
+input[type='submit'] {
+	cursor: pointer;
+}
+
+button {
+	@include hover;
+	text-transform: uppercase;
+	font: {
+		family: $dosis;
+		weight: $bold;
+	}
+}
+
+input, button, textarea {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	line-height: 1.5;
+	font-family: $text;
+	font-size: #{$base-font-size}px;
+}
+
+input[type=date],
+input[type=text],
+input[type=password],
+input[type=email],
+textarea {
+	position: relative; z-index: 5;
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: white;
+    border-radius: 0;
+    border: 1px solid $gray-alto;
+    padding: 0 10px;
+}
+
+textarea {
+	height: 80px;
+	resize: none;
+	padding-top: 15px;
+	overflow: auto;
+}
+
+.form {
+	input {
+		position: relative; z-index: 5;
+	}
+
+	.row {
+		@include clear;
+		position: relative; 
+		z-index: 5;
+		margin-bottom: 10px;
+	}
+	
+	.field {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		margin-right: 5px;
+
+		&.medium {
+			width: 300px;
+		}
+		
+		&.ultrashort {
+			width: 60px;
+		}
+		
+		&.short {
+			width: 100px;
+		}
+		
+		&:last-of-type {
+			margin-right: 0;
+		}
+		
+		input {
+			@include input-placeholder {
+				@include opacity(.5);
+			}
+		}
+		
+		&.error {
+			input {
+				border-color: $red-persian;
+				
+				@include input-placeholder {
+					color: $red-persian;
+				}
+			}			
+		}
+	}
+
+	&.fields-medium {
+		input[type=date],
+		input[type=email],
+		input[type=text],
+		input[type=password] {
+			height: 40px;
+			padding: 0 20px;
+		}
+	}
+	
+	.star {
+		position: absolute; right: 10px; top: 5px; z-index: 10;
+		display: block;
+		font-size: em(30);
+		color: $red-persian;
+	}
+	
+	@include input-placeholder {
+		font-family: $lato;
+		font-weight: $regular;
+		font-size: em(15);
+		color: black;
+	}	
+}
+
+.form-message {
+	display: none;
+	margin-bottom: 20px;
+	padding: 15px;
+	font-weight: $bold;
+
+	&.error,
+	&.error-server {
+		background-color: rgba( $red-persian, .1 );
+		color: $red-persian;
+	}
+	
+	&.success {
+		position: relative;
+		background-color: rgba( $green, .1 );
+		padding-left: 70px;
+		color: $green;
+		
+		&:before {
+			@include icomoon;
+			position: absolute; left: 20px; top: 15px; z-index: 10;
+			display: block;
+			font-size: 22px;
+			content: "\e61a";
+		}
+	}
+}

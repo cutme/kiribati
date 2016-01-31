@@ -1,0 +1,27 @@
+.nav-simple {
+	padding: 15px 30px;
+
+	li {
+		text-transform: uppercase;
+		
+		a {
+			@include antialias;
+			display: block;
+			padding: 5px 0;
+			font: {
+				family: $dosis;
+				weight: $bold;
+			}
+			
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+
+	.current-menu-item {
+		a {
+			color: $red;
+		}
+	}
+}

@@ -1,0 +1,91 @@
+.work {
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+
+	h1.main {
+		@media screen and ( max-width: $grid-base-width + px ) {
+			padding-left: 0;
+		}
+	}
+
+	.info {
+		width: grid(585);
+
+		@media screen and ( max-width: $smartphone_landscape - 1 + px ) {
+			width: 100%;
+		}
+
+		h2 {
+			margin-bottom: 30px;
+			font-size: em(40);
+		}
+
+		p {
+			margin-bottom: 20px;			
+		}
+		
+		ul {
+			margin: 0 0 30px 40px;
+			
+			li {
+				background: {
+					image: url('../img/icon-tick-orange.png');
+					repeat: no-repeat;
+					position: left top;
+				}
+				padding-left: 30px;
+				font-size: em(17);
+			}
+		}
+		
+		
+	}
+	
+	.application {
+		width: grid(485);
+		
+		@media screen and ( max-width: $smartphone_landscape - 1 + px ) {
+			width: 100%;
+		}
+		
+		h2 {
+			margin-bottom: 30px;
+			text-transform: none;
+			font-size: em(30);
+			
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				font-size: em(24);
+			}
+		}
+		
+		.form .field.medium {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: 100%;
+			}
+		}
+		
+		.policy {
+			@include opacity(.5);
+			margin-bottom: 40px;
+			font-size: em(13);
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+			padding-top: 15px;
+			font-weight: $bold;
+			
+			& + p {
+				margin-top: -10px;
+				margin-bottom: 10px;
+			}
+		}
+
+	}
+}

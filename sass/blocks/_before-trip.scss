@@ -1,0 +1,67 @@
+.before-trip {
+	@include clear;
+	margin-bottom: 20px;
+	
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+
+	.item {
+		display: block;
+		margin-bottom: 35px;
+		
+		figure {
+			@include hover;
+			margin-bottom: 25px;
+		}
+		
+		img {
+			@media screen and ( max-width: $smartphone_landscape_small + px ) {
+				width: 100%;
+			}
+		}
+		
+		.title {
+			display: block;
+			margin-bottom: 20px;
+			font-size: em(18);
+			font-weight: $bold;
+		}
+		
+		&:hover {
+			figure {
+				@include opacity(.9);
+			}
+			
+			.title {
+				color: $red;
+			}
+		}
+	}
+	
+	ul {
+		li {
+			@media screen and ( min-width: $smartphone_landscape_small + 1 + px ) {
+				float: left;
+				width: grid(360);
+				margin-right: grid(30);
+			}
+			
+			@media screen and ( max-width: $smartphone_landscape_small + px ) {
+				margin-bottom: 25px;
+			}
+			
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+			
+			&:nth-child(3n+1) {
+				clear: left;
+			}
+		}
+	}
+}

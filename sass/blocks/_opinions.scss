@@ -1,0 +1,146 @@
+.opinions {
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+
+	p {
+		@include antialias;
+	}
+	
+	a {
+		color: $red;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	.intro {
+		margin-bottom: 25px;
+	}
+	
+	.item {
+		figure {
+			float: left;
+			width: grid(80, 780);
+			margin-top: 15px;
+
+			img {
+				@include border-radius(100%);
+				object-fit: cover;
+			}
+		}
+		
+		.content {
+			float: left;
+			background: {
+				image: url('../img/icon-quote.png');
+				repeat: no-repeat;
+				position: left top;
+			}
+			padding: 20px 0 0 10px;
+		}
+		
+		.title {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: $bold;
+		}
+		
+		blockquote {
+			text-align: left;
+			color: $gray-shaft;
+			
+			p {
+				font-family: $lato;
+				font-style: italic;
+				font-weight: $regular;
+				
+			}
+		}
+
+		.meta {
+			p {
+				margin: 0;
+				font-size: em(13);
+				
+				a {
+				font-weight: $bold;}
+			}
+		}
+	}
+	
+	ul {
+		@include clear;
+		margin-bottom: 20px;
+	}
+	
+	.featured {
+		@include clear;
+		background-color: $gray-athens;
+		padding: 15px 20px 5px 30px;
+		margin-bottom: 50px;
+		
+		figure {
+			width: grid(134, 730); height: 134px;
+		}
+		
+		.content {
+			float: right;
+			width: grid(570, 730);
+			
+			p {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	
+	.full {
+		.item {
+			@include clear;
+			margin-bottom: 35px;
+		}
+
+		.content {
+			width: grid(685, 780);
+		}
+	}
+	
+	.two-columns {
+		.item {
+			float: left;
+			width: grid(360, 780);
+			
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				float: none;
+				width: 100%;
+			}
+			
+			blockquote {
+				margin-bottom: 5px;
+				
+				p {
+					margin-bottom: 0;
+				}
+			}
+			
+			figure {
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					width: grid(80, $smartphone_landscape)
+				}
+			}
+			
+			.content {
+				width: grid(270, 360);
+				
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					width: grid(520, $smartphone_landscape)
+				}
+			}
+
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+}

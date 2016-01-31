@@ -1,0 +1,88 @@
+div.pilot {
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px 0 10px;
+	}
+	
+	.main {
+		margin-bottom: 40px;
+		padding-left: 0;
+		
+		@media screen and ( max-width: $smartphone_landscape + px ) {
+			margin-bottom: 25px;
+		}
+	}
+
+	.pilot-info {
+		figure {
+			float: left;
+			width: grid(234);
+			
+			@media screen and ( max-width: $smartphone_landscape_small - 1 + px ) {
+				float: none;
+				width: 100%;
+				margin-bottom: 25px;
+			}
+	
+			img {
+				@include border-radius(100%);
+				object-fit: cover;
+				
+				@media screen and ( max-width: $smartphone_landscape_small - 1 + px ) {
+					margin: 0 auto;
+				}
+			}
+		}
+		
+		.description {
+			float: right;
+			width: grid(865);
+			margin-bottom: 60px;
+			
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				margin-bottom: 0;
+			}
+			
+			@media screen and ( max-width: $smartphone_landscape_small - 1 + px ) {
+				width: 100%;
+			}
+	
+			p {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	
+	.traveling-with-me {
+		@include clear;
+		margin-bottom: 35px;
+
+		h2 {
+			margin-bottom: 30px;
+			text-transform: none;
+			font-size: em(30);
+		}
+		
+		.box-excerpt {
+			float: left;
+			width: grid(380);
+			
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				width: 100%;
+			}
+			
+			figure {
+				width: grid(115, 380);
+			}		
+			
+			.description {
+				width: grid(265, 380);
+			}
+			
+			&.small {
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					padding: 0 0 15px 0;
+				}
+			}
+		}
+	}
+}

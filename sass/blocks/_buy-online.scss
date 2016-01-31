@@ -1,0 +1,23 @@
+.buy-online {
+	padding: 20px 40px;
+
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 20px 0 20px 30px;
+	}
+	
+	@media screen and ( min-width: $smartphone_landscape_small + 1 + px ) and ( max-width: $tablet_portrait + px ) {
+		clear: none;
+		float: right;
+		width: 49%;
+	}
+
+	h4 {
+		font-size: em(19);
+		color: $blue-smalt;
+	}
+	
+	h5 {
+		font-size: em(14);
+		color: $blue-rock;
+	}
+}

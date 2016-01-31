@@ -1,0 +1,35 @@
+.nav-secondary {
+	position: absolute; z-index: 5;
+	right: grid(280, $grid-base-width-home); top: 34px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		right: 280px;
+	}
+	
+	> ul {
+		li {
+			float: left;
+
+			a {
+				@include antialias;
+				display: block;
+				padding: 0 10px;
+				text-transform: uppercase;
+				font: {
+					family: $dosis;
+					size: em(11);
+					weight: $bold;
+				}
+				color: $gray-gray;
+
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+	}
+	
+	@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+		display: none;
+	}
+}

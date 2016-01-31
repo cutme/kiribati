@@ -1,0 +1,129 @@
+.box-excerpt {
+	float: left;
+	width: grid(390, 765);
+	margin-bottom: 10px;
+	
+	@media screen and ( max-width: $smartphone_landscape + px ) {
+		@include clear;
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	
+	figure {
+		float: left;
+		width: grid(115, 390);
+	}
+	
+	img {
+		@media screen and ( max-width: $smartphone_landscape + px ) {
+			width: 100%;
+		}
+	}	
+	
+	.description {
+		float: left;
+		width: grid(275, 390);
+		padding: 10px 40px 0 10px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding-top: 0;
+		}
+
+		h3 {
+			margin-bottom: 10px;
+		}
+	}
+	
+	.date {
+		@include antialias;
+		text-transform: uppercase;
+		color: $gray-dusty;
+	}
+	
+	&.small {
+		h3 {
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				font-size: em(22);
+			}
+			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				font-size: em(18);
+			}
+		}
+
+		&:nth-of-type(odd) {
+			@media screen and ( min-width: $smartphone_landscape + 1 + px ) {
+				width: grid(375, 765);
+				
+				.description {
+					width: grid(260, 375);
+				}
+				
+				figure {
+					width: grid(115, 375);
+				}	
+			}
+		}
+		
+		.date {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				font-size: em(13);
+			}
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding-top: 0;
+		}
+		
+		@media screen and ( max-width: $smartphone_landscape + px ) {
+			padding: 0 25px 15px 25px;
+		}
+	}
+
+	&.wide {
+		@include clear;
+		width: 100%;
+		background-color: $gray-athens;
+		margin-bottom: 20px;
+
+		figure {
+			width: grid(375, 765);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: 100%;
+			}
+			
+			img {
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					width: 100%;
+				}
+			}
+		}
+		
+		.description {
+			width: grid(390, 765);
+			padding: 40px 25px 0 25px;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: 100%;
+				padding: 25px;
+			}
+			
+			
+			h3 {
+				margin-bottom: 20px;
+				font-size: em(30);
+			}				
+		}
+	}
+	
+	&:hover {
+		background-color: $brown;
+		color: $yellow;
+		
+		.date {
+			color: $yellow;
+		}
+	}
+}

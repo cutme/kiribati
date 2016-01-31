@@ -1,0 +1,117 @@
+@mixin antialias {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin clear {
+	clear: both;
+	
+	&:after {
+		clear: both;
+		display: block;
+		content: '';
+	}
+}
+
+@mixin font-face-db( $font-name, $font-filename ){
+  @font-face {
+    font-family: $font-name;
+    src: url('../fonts/' + $font-filename + '.eot');
+    src: url('../fonts/' + $font-filename + '.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/' + $font-filename + '.woff') format('woff'),
+         url('../fonts/' + $font-filename + '.ttf') format('truetype'),
+         url('../fonts/' + $font-filename + '.svg#' + $font-filename ) format('svg');
+    font-weight: normal; font-style: normal;
+  }
+}
+
+@mixin hide-text{
+	text-indent: -2007px;
+	overflow: hidden;
+}
+
+@mixin hover {
+	@include transition-property(all);
+	@include transition-duration(.2s);
+}
+
+@mixin icomoon {
+	font-family: $icons;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin input-placeholder($selector: "") {
+	#{$selector}::-webkit-input-placeholder { @content; }
+	#{$selector}:-moz-placeholder { @content; }
+	#{$selector}:-ms-input-placeholder { @content; }
+}
+
+@mixin list-dots {
+	
+	ul {
+		margin-bottom: 20px;
+		
+		li {
+			position: relative;
+			padding-left: 20px;
+			font-size: inherit;
+			
+			p {
+				margin: 0;
+			}
+			
+			&:before {
+				@include border-radius( 50% );
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 4px; height: 4px;
+				margin-right: 5px;
+				color: $red-stiletto;
+				content: '•';
+			}
+		}
+	}
+}
+
+$prefixes: ("-webkit-","-moz-", "-o-", "");
+@mixin selection($color, $background) {
+    @each $prefix in $prefixes {
+        ::#{$prefix}selection {
+            color: $color;
+            background: $background;
+        }
+    }
+}
+
+@mixin wrapper {
+	@include clear;
+	position: relative; z-index: 5;
+	max-width: $grid-base-width+px;
+	margin: {
+		left: auto;
+		right: auto;
+		bottom: 30px;
+	}
+	
+	@media screen and ( max-width: $grid-base-width+px ) {
+		padding: {
+			//left: 25px;
+			//right: 25px;
+		}
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape - 1 +px ) {
+		padding: {
+			//left: 10px;
+			//right: 10px;
+		}
+	}
+}

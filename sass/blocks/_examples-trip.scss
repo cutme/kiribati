@@ -1,0 +1,207 @@
+
+.examples-trip {
+	@include clear;
+	
+	h2, h3 {
+		margin-bottom: 35px;
+		text-transform: none;
+		font-size: em(40);
+		
+		@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+			padding-left: 25px;
+			font-size: em(34);
+		}
+		
+		@media screen and ( max-width: $smartphone_landscape_small - 1 + px ) {
+			padding-left: 10px;
+		}
+	}
+	
+	h3 {
+		font-size: em(30);
+		
+		@media screen and ( max-width: $grid-base-width + px ) {
+			padding-left: 25px;
+		}
+	}
+
+	ul {
+		@include clear;
+		
+		@media screen and ( min-width: $smartphone_landscape_small + px ) {
+			@include flexbox;
+			@include flex-direction(row);
+			@include flex-flow(row wrap);
+		}
+		
+		li {
+			@include hover;	
+			position: relative;
+			background-color: $gray-athens;
+			border-bottom: 3px solid $gray-iron;
+			margin-bottom: 15px;
+			
+			&:hover {
+				background-color: $brown;
+				
+				.item {
+					.location,
+					.description p,
+					h5,
+					i::before {
+						color: $yellow;
+					}
+				}				
+			}
+		}
+		
+		.item {			
+			figure {
+				position: relative;
+				margin-bottom: 10px;
+				overflow: hidden;
+				
+				img {
+					display: block;
+					position: relative; z-index: 5;
+					width: 100%;
+					
+					&.hidden {
+						display: none;
+						position: absolute;
+						left: 0; top: 0; z-index: 10;
+					}
+					
+					@media screen and ( max-width: $tablet_portrait + px ) {
+						width: 100%;
+					}
+				}
+				
+				.place {
+					position: absolute; left: 0; top: 0; z-index: 15;
+					background: {
+						image: url('../img/cutted.png');
+						position: right bottom;
+						repeat: no-repeat;
+					}
+					padding: 10px 15px 14px 10px;
+					line-height: 1;
+					text-transform: uppercase;
+					font: {
+						family: $dosis;
+						size: em(13);
+						weight: $bold;
+					}
+					color: $yellow;
+				}
+			}
+			
+			h5 {
+				font: {
+					family: $lato;
+					size: em(15);
+				}
+			}
+			
+			.content {
+				display: block;
+				background-color: $gray-athens;
+			}
+			
+			.location {
+				padding-left: 15px;
+				font-size: em(11);
+				color: $red;
+				
+				i {
+					margin-right: 3px;
+					font-size: 16px;
+				}
+			}
+			
+			.description {
+				display: block;
+				padding: 10px 15px;
+				//border-bottom: 1px solid $gray-iron;
+				padding-bottom: 60px;
+				
+				h5 {
+					margin-bottom: 10px;
+					text-transform: none;
+				}
+				
+				p {
+					margin-bottom: 10px;
+					font-size: em(12);
+					color: $gray-dove;
+				}
+			}
+			
+			.meta {
+				@include clear;
+				position: absolute; left: 0; bottom: 0;
+				display: block;
+				width: 100%;
+				padding: 13px 15px;
+				border-top: 1px solid $gray-iron;
+				line-height: 1;
+				
+				@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+					font-size: .8em;
+				}
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					padding: 10px 15px;
+				}
+
+				h5 {
+					display: inline;
+				}
+				
+				i {
+					margin-right: 5px;
+					font-size: 16px;
+					color: $red;
+				}
+
+				.push-left,
+				.push-right {
+					@media screen and ( min-width: $smartphone_landscape + px ) and ( max-width: $tablet_landscape - 1 + px )  {
+						@include clear;
+						float: none;
+						margin-bottom: 4px;
+					}
+				}
+			}			
+		}		
+	}
+}
+
+//body > .examples-trip {
+.examples-trip {
+	ul {
+		li {
+			width: grid(273);
+			margin-right: grid(16);
+
+			@media screen and ( max-width: $tablet_portrait - 2 + px ) {
+				width: grid(375, $tablet_portrait - 2);
+				margin-right: grid(16, $tablet_portrait - 2); 
+			}
+			
+			@media screen and ( max-width: $smartphone_landscape_small - 1 + px ) {
+				width: 100%;
+			}
+			
+			&:nth-child(2n) {
+				@media screen and ( max-width: $tablet_portrait - 2 + px ) {
+					margin-right: 0;
+				}
+			}
+			
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		}
+	}
+}

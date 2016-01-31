@@ -1,0 +1,103 @@
+.faq {
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding-left: 25px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		padding: 0 25px;
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+	
+	p {
+		margin-bottom: 20px;
+	}
+
+	.item {
+		@include clear;	
+		@include hover;
+		
+		margin-bottom: 15px;
+
+		.num {
+			float: left;
+			width: grid(45, 780); height: 38px;
+			background-color: $gray-athens;
+			border-left: 3px solid $red-stiletto;
+			text-align: center;
+			font: {
+				size: em(20);
+				weight: $light;
+			}
+			cursor: pointer;
+			line-height: 38px;
+			
+			@media screen and ( max-width: $smartphone_landscape_small + px ) {
+				font-size: em(14);
+			}
+		}
+		
+		.content {
+			float: right;
+			width: grid(735, 780);
+			overflow: hidden;
+			
+			.title {
+				height: 38px;
+				padding-top: 6px;
+				padding-left: 20px;
+				text-transform: none;
+				font: {
+					size: em(20);
+					weight: $light;
+				}
+				cursor: pointer;
+				
+				&:after {
+					top: 10px;
+					display: none;
+				}
+			}
+			
+			.description {
+				@include list-dots;
+				position: relative;
+				padding-right: 20px;
+				padding-left: 20px;
+				//display: none;
+				
+				a {
+					color: $red;
+					
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		
+		&:hover {
+			.title {				
+				&:after {
+					display: block;
+				}
+			}
+		}
+		
+		&.active {
+			background-color: $gray-athens;
+			
+			.content {
+				.title {
+					margin-bottom: 5px;
+
+					&:after {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

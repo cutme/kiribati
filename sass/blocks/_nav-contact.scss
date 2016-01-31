@@ -1,0 +1,112 @@
+.nav-contact {
+	float: left;
+	position: relative; z-index: 5;
+	color: white;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		position: absolute;
+		left: 25px; top: 50px;
+		padding-top: 60px;
+	}
+
+	
+	a:hover {
+		color: $yellow;
+	}
+	
+	.tel,
+	.email {
+		@include antialias;
+		text-transform: uppercase;
+		font: {
+			family: $dosis;
+			size: em(19);
+			weight: $bold;
+		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			font-size: em(16);
+		}
+	}
+	
+	.tel {
+		margin-bottom: 15px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: 5px;
+			margin-left: -7px;
+		}
+
+		a {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+	
+	.email {
+		margin-bottom: 35px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-left: -7px;
+		}
+	}
+	
+	.icon-phone,
+	.icon-mail {
+		color: $yellow;
+		
+		&:before {
+			display: inline-block;
+			width: 34px;
+			text-align: center;
+			vertical-align: sub;
+		}
+	}
+	
+	.icon-phone {
+		font-size: em(22);
+		
+		
+	}
+	
+	.icon-mail {
+		font-size: em(16);
+	}
+	
+	.social {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			position: absolute; top: 0; left: 0;
+		}
+
+		a {
+			display: inline-block;
+			margin-right: 8px;
+			font-size: em(42);
+			color: $yellow;
+			
+			&:hover {
+				color: lighten( $yellow, 10% );
+			}
+			
+			&.icon-youtube {
+				@include border-radius( 50% );
+				width: 42px; height: 42px;
+				background-color: $yellow;
+				color: #664e3f;
+				//vertical-align: text-bottom;
+				
+				&:before {
+					font-size: 23px;
+				    padding: 4px 0 0 9px;
+				    display: inline-block;
+				    vertical-align: middle;
+				    height: 42px;
+				}
+				
+				&:hover {
+					background-color: lighten( $yellow, 10% );
+				}
+			}
+		}
+	}
+}

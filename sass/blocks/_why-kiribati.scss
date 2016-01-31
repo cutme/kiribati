@@ -1,0 +1,187 @@
+.why-kiribati {
+	position: relative; z-index: 1;
+	background-color: $gray-concrete;
+	margin-bottom: -25px;
+	padding: 40px 0 80px 0;
+	text-align: center;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		padding: 40px 25px;
+	}
+	
+	.wrapper {
+		max-width: $grid-base-width-home + px;
+	}
+	
+	h2 {
+		margin-bottom: 25px;
+		font-size: em(30);
+		color: $brown;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			text-align: left;
+		}
+	}
+
+	ul {
+		@include clear;
+	}
+
+	li {
+		float: left;
+		width: grid(130, $grid-base-width-home);
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 45%;
+			border-bottom: 1px solid #cfc8c5;
+			text-align: left;
+			
+			&:last-child,
+			&:last-child(-1) {
+				border: none;
+			}
+		}
+		
+		@media screen and ( max-width: $smartphone_landscape_small + px ) {
+			float: none;
+			width: 100%;
+		}
+
+		&:nth-child(even) {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				float: right;
+			}
+			
+			@media screen and ( max-width: $smartphone_landscape_small + px ) {
+				float: none;
+			}
+		}
+
+		a {
+			display: inline-block;
+			width: grid(100, 130);
+			margin: 0 auto;
+			font-size: em(13);
+			color: $brown;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				display: block;
+				width: 100%;
+				font-size: em(15);
+			}
+			
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				font-size: em(13);
+			}
+
+			i {
+				@include border-radius( 50% );
+				display: block;
+				background-image: url('../img/why-kiribati.png');
+				background-size: 900% 200%;
+				margin-bottom: 10px;
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					width: 80px;
+					display: inline-block;
+					margin: 0;
+					vertical-align: middle;
+				}
+				
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					width: 50px;
+				}
+			}
+
+			.small-groups {
+				background-position: 0 0;
+			}
+
+			.singles {
+				background-position: 13% 0;
+			}
+
+			.freedom-travel {
+				background-position: 25% 0;
+			}
+
+			.pilot {
+				background-position: 38% 0;
+			}
+
+			.individual {
+				background-position: 49.5% 0;
+			}
+			
+			.accommodation {
+				background-position: 63% 0;
+			}
+			
+			.transport {
+				background-position: 75% 0;
+			}
+			
+			.eat {
+				background-position: 87% 0;
+			}
+			
+			.set {
+				background-position: 100% 0;
+			}
+			
+			&:hover {
+				i {
+					@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+						background-color: white;
+					}
+				}
+
+				.small-groups {
+					background-position: 0 500%;
+				}
+				
+				.singles {
+					background-position: 13% 500%;
+				}
+				
+				.freedom-travel {
+					background-position: 25% 500%;
+				}
+				
+				.pilot {
+					background-position: 38% 500%;
+				}
+				
+				.individual {
+					background-position: 49.5% 500%;
+				}
+				
+				.accommodation {
+					background-position: 63% 500%;
+				}
+				
+				.transport {
+					background-position: 75% 500%;
+				}
+				
+				.eat {
+					background-position: 87% 500%;
+				}
+				
+				.set {
+					background-position: 100% 100%;
+				}
+			}
+		}
+	}
+	
+	.home & {
+		margin-bottom: 30px;
+		padding: 40px 0;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding: 40px 25px;
+		}
+	}
+}
+

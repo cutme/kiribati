@@ -1,0 +1,265 @@
+.gallery-slider {
+	height: 567px;
+	
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		height: 400px;
+	}
+	
+	.caption {
+		position: absolute; right: 10px; bottom: 10px; z-index: 10;
+		background-color: $brown-mahogany;
+		padding: 5px 50px;
+		color: white;
+	}
+	
+	.rsImg {
+		position: relative; z-index: 5;
+	}
+	
+	.rsArrowLeft {
+		left: 25px;
+	}
+	
+	.rsArrowRight {
+		right: 25px;
+	}
+}
+
+.gallery-slider,
+.recommended-trip-slider {
+	position: relative;
+
+	.rsNav {
+		@include scut-center-transform;
+		position: absolute;
+		z-index: 10;
+		display: block;
+		width: 100%;
+		height: 32px;
+		
+		.rsArrow {
+			@include border-radius( 50% );
+			@include hover;
+			position: absolute;
+			display: block;
+			width: 32px; height: 32px;
+			background-color: rgba(white, .7);
+			text-align: center;
+			font-size: 16px;
+			line-height: 32px;
+
+			&:hover {
+				background-color: white;
+			}
+		}
+	}
+
+	.wrapper {
+		@include transform( translateX(-50%));
+		position: absolute;
+		left: 50%;
+		z-index: 10;
+		width: 1170px;
+		height: 100%;
+		
+		@media screen and ( max-width: $grid-base-width-home + px ) {
+			width: 100%;
+		}
+	}
+}
+
+.opinions-slider {
+	float: left;
+	position: relative;
+	width: grid(625, $grid-base-width-home);
+	min-height: 320px;
+	background: {
+		image: url('../img/icon-quote.png');
+		repeat: no-repeat;
+		position: grid(180, 555)  60px;
+		color: $gray-athens;
+	}
+	padding: 30px 35px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		float: none;
+		width: 100%;
+	}
+	
+	header {
+		margin-bottom: 25px;
+
+		h4 {
+			font-size: em(24);
+			
+			&:after {
+				vertical-align: top;
+				font-size: 20px;
+				content: ' »';
+				color: $red;
+			}
+		}
+	}
+	
+	figure {
+		@include clear;
+		margin-bottom: 10px;
+	
+		img {
+			@include border-radius(100%);
+			object-fit: cover;
+		}
+	}
+	
+	figcaption {
+		float: left;
+		width: grid(350, 555);
+		padding-left: 20px;
+	}
+	
+	.image {
+		@include border-radius( 100% );
+		float: left;
+		width: grid(130, 555);
+	}
+	
+	.rsArrow {
+		display: none;
+	}
+	
+	q {
+		display: block;
+		margin-bottom: 20px;
+		font: {
+			size: em(16);
+			style: italic;
+		}
+		color: $gray-shaft;
+	}
+	
+	p {
+		font: {
+			family: $dosis;
+		}
+		
+		a {
+			font: {
+				family: $dosis;
+				size: em(13);
+				weight: $bold;
+			}
+			color: $red;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	.more-opinions {
+		padding-left: grid(150, 555);
+
+		a {
+			@include antialias;
+			text-transform: uppercase;
+			font: {
+				size: em(13);
+				weight: $bold;
+			}
+			color: $red;
+			
+			&:after {
+				content: ' »';
+			}
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	.rsBullets {
+		position: absolute; right: 30px; bottom: 20px;
+		
+		.rsBullet {
+			@include border-radius(100%);
+			display: inline-block;
+			width: 14px; height: 14px;
+			background-color: rgba( $red, .5 );
+			margin-left: 5px;
+			
+			&.rsNavSelected {
+				background-color: $red;
+			}
+		}
+	}
+}
+
+.recommended-trip-slider {
+	height: 362px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		margin-bottom: 0;
+	}
+	
+	.rsArrowLeft {
+		left: 0;
+		
+		@media screen and ( max-width: $grid-base-width-home + px ) {
+			left: 25px;
+		}
+	}
+	
+	.rsArrowRight {
+		right: 0;
+		
+		@media screen and ( max-width: $grid-base-width-home + px ) {
+			right: 25px;
+		}
+	}
+	
+	.rsNav {
+		max-width: $grid-base-width + px;
+	}
+	
+	.caption {
+		right: 0;
+		width: 390px;
+		padding: 20px;
+		
+		@media screen and ( max-width: $smartphone_landscape_small - 1 + px ) {
+			width: 100%;
+		}
+		
+
+		> span {
+			@include hover;
+			padding: 10px 20px;
+			
+			.lead {
+				@include clear;
+				@include hover;
+				margin-bottom: 10px;
+				font-size: 22px;
+			}
+			
+			.time, .location {
+				float: left;
+			}
+
+			.date {
+				float: right;
+			}
+		}
+		
+		&:hover {
+			> span {
+				background-color: rgba( white, .8);
+				
+				.lead {
+					color: $red;
+				}
+			}
+		}
+	}
+}

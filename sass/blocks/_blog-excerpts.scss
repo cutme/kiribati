@@ -1,0 +1,19 @@
+.blog-excerpts {
+	float: left;
+	width: grid(765, $grid-base-width-home);
+	
+	@media screen and ( max-width: $smartphone_landscape + px ) {
+		@include clear;
+		float: none;
+		width: 100%;
+	}
+	
+	h2 {
+		margin-bottom: 20px;
+		font-size: em(24);
+		
+		@media screen and ( max-width: $grid-base-width-home + px ) {
+			padding-left: 25px;
+		}
+	}
+}

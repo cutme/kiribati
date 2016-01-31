@@ -1,0 +1,182 @@
+.wrapper.list {
+	margin-bottom: 40px;
+	
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+
+	.column {
+		&.left {
+			width: grid(260);
+			
+			@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+				float: none;
+				width: 100%;
+			}
+		}
+		
+		&.right {
+			width: grid(860);
+			
+			@media screen and ( max-width: $tablet_landscape - 1 + px ) {
+				float: none;
+				width: 100%;
+				margin-bottom: 25px;
+			}
+		}
+	}
+	
+	.buy-online,
+	.call-us {
+		padding: 20px 25px;
+	}
+	
+	.epiloque {
+		p {
+			font-size: em(13);
+		}
+	}
+	
+	.examples-trip {
+		margin-bottom: 20px;
+
+		li {
+			width: grid(272, 860);
+			margin-right: grid(22, 860);
+			
+			@media screen and ( max-width: $tablet_portrait - 2 + px ) {
+				width: grid(375, $tablet_portrait - 2);
+				margin-right: grid(16, $tablet_portrait - 2); 
+			}
+			
+			@media screen and ( max-width: $smartphone_landscape_small - 1 + px ) {
+				width: 100%;
+			}
+			
+			&:nth-child(2n) {
+				@media screen and ( max-width: $tablet_portrait - 2 + px ) {
+					margin-right: 0;
+				}
+			}
+			
+			&:nth-child(3n) {
+				@media screen and ( min-width: $tablet_portrait - 1 + px ) {
+					margin-right: 0;
+				}
+			}
+		}
+
+	}
+	
+	.location-menu {
+		background-color: $gray-athens;
+		margin-bottom: 60px;
+		
+		h4 {
+			margin-bottom: 10px;
+			background-color: $gray-gallery2;
+			padding: 15px;
+			font-size: em(18);
+		}
+	}
+	
+	.length-of-trip {
+		padding: 0 15px 15px 20px;
+		border-bottom: 3px solid $gray-iron;
+		
+		li {
+			padding: 3px 0;
+			
+			label {
+				cursor: pointer;
+				
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+	
+		span.ui-radio {
+			margin-right: 10px;
+		}
+	}
+	
+	.select-date {
+		padding: 5px 15px 15px 15px;
+	}
+	
+	.top-bar {
+		@include clear;
+		margin-bottom: 25px;
+		
+		.sort {
+			float: left;
+			width: grid(210, 860);
+			
+			@media screen and ( max-width: $tablet_landscape - 1 + px )  {
+				width: grid(350);
+			}
+	
+			label {
+				float: left;
+				width: gri(60, 860);
+				line-height: 40px;
+				
+				@media screen and ( max-width: $tablet_landscape - 1 + px )  {
+					width: grid(100, 350);
+				}
+
+				
+				@media screen and ( max-width: $smartphone_landscape - 1 + px )  {
+					display: none;
+				}
+			}
+	
+			.field {
+				float: right;
+				width: grid(150, 210);
+				
+				@media screen and ( max-width: $tablet_landscape - 1 + px )  {
+					width: grid(250, 350);
+				}
+				
+				@media screen and ( max-width: $smartphone_landscape - 1 + px )  {
+					width: 100%;
+				}
+			}
+		}
+		
+		.figure-switcher {
+			float: right;
+			
+			.btn {
+				border: 1px solid #ededee;
+				margin-left: 4px;
+				padding: 11px 10px;
+				text-transform: uppercase;
+				font: {
+					family: $dosis;
+					size: em(13);
+					weight: $bold;
+				}
+				color: $brown-lonestar;
+				
+				i {
+					margin-right: 5px;
+					font-size: 16px;
+				}
+				
+				&.active,
+				&:hover {
+					background-color: $brown-lonestar;
+					color: $yellow;
+				}
+			}
+		}
+	}
+}
+

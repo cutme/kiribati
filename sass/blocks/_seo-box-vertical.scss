@@ -1,0 +1,85 @@
+.seo-box-vertical {
+	float: right;
+	width: grid(375, $grid-base-width-home);
+	margin-bottom: 40px;
+	margin-top: 45px;
+
+	@media screen and ( max-width: $smartphone_landscape + px ) {
+		@include clear;
+		float: none;
+		width: 100%;
+	}
+	
+	img {
+		@media screen and ( max-width: $smartphone_landscape + px ) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	.title {
+		@media screen and ( min-width: $tablet_landscape + 1 px ) {
+			height: 247px;
+			background-color: $gray-athens;
+			margin-bottom: 20px;
+		}
+
+		h3 {
+			position: relative;
+			height: 117px;
+			
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				height: auto;
+				margin-bottom: 25px;
+				padding: 0 25px;
+				text-transform: none;
+				font-family: $lato;
+			}
+			
+			span {
+				font-size: em(24);
+				
+				@media screen and ( min-width: $smartphone_landscape + 1 + px ) {
+					@include scut-center-transform(y);
+					left: 0;
+					display: inline-block;
+					width: 100%;
+					padding: 0 grid(40, 375);
+					text-align: center;
+					font-size: em(18);
+				}
+				
+				@media screen and ( max-width: $tablet_landscape + px ) {
+					padding: 15px;
+				}
+				
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					padding: 0;
+				}
+			}
+		}
+	}
+	
+	.description {
+		@media screen and ( max-width: $grid-base-width-home + px ) {
+			padding-right: 20px;
+		}
+		
+		@media screen and ( max-width: $smartphone_landscape + px ) {
+			padding: 0 25px;
+		}
+		
+		p {
+			margin-bottom: 10px;
+			font-size: em(14);
+		}
+		
+		a {
+			color: $red;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

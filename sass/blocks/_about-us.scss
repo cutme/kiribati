@@ -1,0 +1,141 @@
+.about-us {
+
+	.item {
+		float: left;
+		
+		figure {
+			@include hover;
+			margin-bottom: 25px;
+		}
+		
+		.title {
+			@include hover;
+			display: block;
+			margin-bottom: 20px;
+			font-size: em(18);
+			font-weight: $bold;
+			
+			@media screen and ( max-width: $grid-base-width + px ) {
+				padding-left: 25px;
+			}
+		}
+		
+		p {
+			@media screen and ( max-width: $grid-base-width + px ) {
+				padding-left: 25px;
+			}
+		}
+		
+		&:hover {
+			figure {
+				@include opacity(.9);
+			}
+			
+			.title {
+				color: $red;
+			}
+		}
+	}
+
+	ul {
+		@include clear;
+
+		li {
+			float: left;
+		}
+	}
+	
+	.medium-items {
+		margin-bottom: 35px;
+
+		li {
+			width: grid(555);
+			
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				@include clear;
+				float: none;
+				width: 100%;
+				margin-bottom: 25px;
+			}
+
+			&:last-child {
+				@media screen and ( min-width: $smartphone_landscape + 1 + px ) {
+					float: right;
+				}
+			}
+			
+			img {
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					width: 100%;
+				}
+			}
+		}	
+	}
+	
+	.small-items {
+		@media screen and ( min-width: $smartphone_landscape + 1 + px ) {
+			@include flexbox;
+			@include flex-direction(row);
+		}
+		margin-bottom: 50px;
+			
+		li {
+			@media screen and ( min-width: $smartphone_landscape + 1 + px ) {
+				@include flex(1);
+			}
+			float: left;
+			width: grid(260);
+			background-color: $gray-athens;
+			margin-right: grid(35);
+			border-bottom: 3px solid $gray-iron;
+
+			img {
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					width: 100%;
+				}
+			}
+			
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				width: 48%;
+				margin-right: 0;
+				margin-bottom: 25px;
+			}
+			
+			&:nth-child(2) {
+				@media screen and ( min-width: $smartphone_landscape + 1 + px ) {
+					margin-right: grid(30);
+				}
+			}
+			
+			&:nth-child(even) {
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					float: right;
+				}
+			}
+			
+			&:last-child {
+				margin-right: 0;
+			}
+			
+			figure {
+				margin: 0;
+			}
+			
+			.item {
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					width: 100%;
+				}
+			}
+			
+			.title {
+				margin-bottom: 0;
+				padding: 35px 10px;
+				font-size: em(15);
+				
+				@media screen and ( max-width: $smartphone_landscape + px ) {
+					padding: 15px 10px;
+				}
+			}
+		}
+	}
+}

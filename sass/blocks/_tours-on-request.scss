@@ -1,0 +1,115 @@
+.tours-on-request {
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+	
+	h1.main {
+		margin-bottom: 30px;
+		
+		@media screen and ( max-width: $grid-base-width + px ) {
+			padding-left: 0;
+		}
+	}
+
+	.column {
+		width: grid(555);
+		margin-bottom: 30px;
+		
+		@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+			float: none;
+			width: 100%;
+		}
+
+		img {
+			margin-bottom: 30px;
+			
+			@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+				width: 100%;
+			}
+		}
+		
+		h3 {
+			text-transform: none;
+			font: {
+				family: $lato;
+				size: em(18);
+			}
+		}
+		
+		p, li {
+			font-size: em(14);
+		}
+		
+		h3, p {
+			margin-bottom: 25px;
+		}
+		
+		h5 {
+			margin-bottom: 20px;
+			text-transform: none;
+			font: {
+				family: $lato;
+				size: em(15);
+			}
+		}
+		
+		ul, ol {
+			margin-bottom: 35px;
+			
+			li {
+				margin-bottom: 5px;
+			}
+		}
+
+		ul {
+			list-style: disc;
+			margin-left: 20px;
+		}
+		
+		p + ol,
+		p + ul {
+			margin-top: -15px;
+		}
+		
+		ol {
+			counter-reset: sekcja;
+			
+			li {
+				position: relative;
+				padding-left: 20px;
+
+				&:before {
+					position: absolute; left: 0; top: 0;
+					width: 15px;
+					text-align: right;
+					counter-increment: sekcja;
+					content: counters(sekcja, ".") ". "; 
+					font-weight: $bold;
+				}
+			}
+		}
+
+		counter-reset: h5;
+		
+		h5 {
+			position: relative;
+			padding-left: 20px;
+
+			&:before {
+				position: absolute; left: 0; top: 0;
+				width: 15px;
+				text-align: right;
+				counter-increment: h5;
+				content: counters(h5, ".") ". "; 
+				font-weight: $bold;
+			}
+		}
+
+
+		
+	}	
+}

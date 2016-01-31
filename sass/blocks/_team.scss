@@ -1,0 +1,110 @@
+.team {
+	margin-bottom: 30px;
+	
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+	
+	h1.main {
+		@media screen and ( max-width: $grid-base-width + px ) {
+			padding-left: 0;
+		}
+	}
+	
+	> p {
+		margin-bottom: 40px;
+	}
+	
+	ul {
+		@include clear;
+		margin-bottom: 30px;
+		
+		@include flexbox;
+		@include flex-direction(row);
+		@include flex-flow(row wrap);
+		align-content: space-between;
+		justify-content: space-between;
+	}
+	
+	.member {
+		float: left;
+		width: grid(261);
+		border-bottom: 1px solid $gray-concrete;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 49%;
+		}
+		
+		@media screen and ( max-width: $smartphone_landscape_small + px ) {
+			float: none;
+			width: 100%;
+		}
+		
+		&:nth-child(4n) {
+			&:after {
+				@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+					content: '';
+					width: 100%;
+				}
+			}			
+		}
+		
+		&:nth-child(2n) {
+			&:after {
+				@media screen and ( min-width: $smartphone_landscape_small + 1 + px ) and ( max-width: $tablet_portrait + px ) {
+					content: '';
+					width: 100%;
+				}
+			}			
+		}
+
+		figure {
+			float: left;
+			width: grid(68, 261);
+			margin-right: 20px;
+			
+			@media screen and ( max-width: $smartphone_landscape_small + 1 + px ) {
+				width: grid(68, $smartphone_landscape_small);
+			}
+		}
+		
+		.description {
+			float: left;
+			width: grid(158, 261);
+			
+			@media screen and ( max-width: $smartphone_landscape_small + 1 + px ) {
+				width: grid(362, $smartphone_landscape_small);
+			}
+		}
+		
+		img {
+			@include border-radius(100%);
+			@include hover;
+			object-fit: cover;
+		}
+		
+		h4 {
+			margin-bottom: 15px;
+			text-transform: none;
+			font-size: em(15);
+			
+			a {
+				color: $red;
+				
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		
+		p {
+			font-size: em(13);
+		}
+	}
+}

@@ -1,0 +1,40 @@
+.photos {
+	li {
+		@include clear;
+		margin-bottom: 3px;
+		
+		a {
+			&:hover {
+				@include opacity(.9);
+			}
+		}
+		
+		img {
+			width: 100%;
+		}
+		
+		&.medium {
+			width: grid(600, 840);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: grid(541, $tablet_portrait);
+			}
+			
+			@media screen and ( max-width: $smartphone_landscape_small + px ) {
+				width: 100%;
+			}
+		}
+		
+		&.small {
+			width: grid(237, 840);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: grid(215, $tablet_portrait);
+			}
+			
+			@media screen and ( max-width: $smartphone_landscape_small + px ) {
+				width: 100%;
+			}
+		}
+	}
+}

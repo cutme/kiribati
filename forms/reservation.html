@@ -1,0 +1,174 @@
+<div id="form-reservation" class="mfp-holder">
+		<h2 class="main"></h2>
+	
+		<div class="summary">
+			<p>
+				<strong>Rezerwacja dla jednego uczestnika</strong>
+			</p>
+			
+			<p>
+				<span class="term">Termin: <strong class="term_txt"></strong></span>
+				<span class="price">Cena: <strong class="price_txt"></strong></span>
+			</p>
+		</div>
+
+
+		<div class="form-message error">
+			<p>Rejestracja nie powiodła się. Uzupełnij pola.</p>
+		</div>
+
+		<div class="form-message success">
+			<p>Gratulacje! Pomyślnie zakończono proces rezerwacji. </p>
+		</div>		
+
+		<div class="additional-message valid-info visible">
+			<p>Aby złożyć rezerwację na wyprawę wystarczy wypełnić pola obowiązkowe oznaczone gwiazdką.</p>
+		</div>
+
+		<div class="additional-message success ">
+			<p>Zaczekaj na potwierdzenie swojej rezerwacji, odezwiemy się do Ciebie..</p>
+		</div>
+		
+
+		
+		<form action="/forms/reservation_send.php" class="form fields-medium">
+			<fieldset class="fields">
+				<div class="row">
+					<label>Adres email</label>
+					
+					<span class="field">
+						<input type="email" name="email" placeholder="Wpisz adres e-mail" required />
+					</span>
+				</div>
+					
+				<div class="row">
+					<label>Czy uczestnik jest klubowiczem Kiribati Club?</label>
+	
+					<span class="field">
+						<input type="checkbox" name="kiribati_club" />
+					</span>
+				</div>
+
+				<div class="row">
+					<label>Imię</label>
+					<span class="field">
+						<input type="text" name="imie" placeholder="Wpisz imię" required />
+					</span>
+				</div>
+
+				<div class="row">
+					<label>Nazwisko</label>
+					<span class="field">
+						<input type="text" name="nazwisko" placeholder="Wpisz nazwisko" required />
+					</span>
+				</div>			
+
+				<div class="row">
+					<label>Adres</label>
+					<span class="field">
+						<input type="text" name="adres" placeholder="Adres" required />
+					</span>
+				</div>
+
+				<div class="row">
+					<label>Telefon kontaktowy</label>
+					<span class="field">
+						<input type="text" name="telefon" placeholder="Telefon kontaktowy" required />
+					</span>
+				</div>
+
+				<div class="row">
+					<label>Data urodzenia (DD-MM-YYYY)</label>
+					<span class="field">
+						<input type="text" name="data_urodzenia" required  />
+					</span>
+				</div>
+
+				<div class="row">
+					<label>Uwagi</label>
+					<span class="field">
+						<textarea name="uwagi"></textarea>
+					</span>
+				</div>
+
+				<div class="row">
+					<label>Rozmir koszulki klubowej</label>
+					<i class="star">*</i>
+					<span class="field white-select">
+						<select name="koszulka">
+							<option value="-">-</option>
+							<option value="S">S</option>
+							<option value="M">M</option>
+							<option value="L">L</option>
+							<option value="XL">XL</option>
+							<option value="XXL">XXL</option>
+							<option value="XXXL">XXXL</option>
+						</select>
+					</span>
+				</div>
+				
+				<div class="row">
+					<label>
+						Ubezpieczenie od chorób przewlekłych 
+						<span class="info">
+							<span class="symbol">i</span>
+							<span class="tooltip">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							</span>
+						</span>
+					</label>
+					<span class="field">
+						<input type="checkbox" name="ubezpieczenie_1" />
+					</span>
+				</div>
+				
+				<div class="row">
+					<label>
+						Ubezpieczenie od kosztów rezygnacji 3% 
+						<span class="info">
+							<span class="symbol">i</span>
+							<span class="tooltip">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							</span>
+						</span>
+					</label>
+					<span class="field">
+						<input type="checkbox" name="ubezpieczenie_2" />
+					</span>
+				</div>
+				
+				<div class="row">
+					<label>
+						Ubezpieczenie od kosztów rezygnacji 7% 
+						<span class="info">
+							<span class="symbol">i</span>
+							<span class="tooltip">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							</span>
+						</span>
+					</label>
+					<span class="field">
+						<input type="checkbox" name="ubezpieczenie_3" />
+					</span>
+				</div>
+				
+				<div class="row">
+					<label>Opłaty wizowe</label>
+					<span class="field">
+						<input type="checkbox" name="oplaty_wizowe" />
+					</span>
+				</div>
+				
+				<div class="row">
+					<label>Chcę otrzymywać newsletter</label>
+					<span class="field">
+						<input type="checkbox" name="newsletter" checked />
+					</span>
+				</div>
+			
+				<div class="row submit">
+					<button type="submit" class="btn secondary zzz">Rezerwuj</button>
+				</div>
+			</fieldset>
+		</form>
+	</div><!-- /form-reservation -->

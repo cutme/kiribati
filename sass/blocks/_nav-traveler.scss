@@ -1,0 +1,26 @@
+.nav-traveler {
+	ul {
+		list-style: disc;
+		margin-left: 30px;
+		margin-bottom: 15px;
+		
+		a {
+			display: block;
+			padding: 5px 0;
+			font-size: em(13);
+			color: $red;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		
+		li {
+			&.current-menu-item {
+				a {
+					color: black;
+				}
+			}
+		}
+	}
+}

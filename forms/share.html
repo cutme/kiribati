@@ -1,0 +1,49 @@
+<div id="form-share" class="mfp-holder">
+		<h2 class="main"></h2>
+
+		<div class="form-message error">
+			<p>Rejestracja nie powiodła się. Uzupełnij pola.</p>
+		</div>
+		
+		<div class="form-message error-server">
+			<p>Problem z połączeniem, spróbuj jeszcze raz.</p>
+		</div>
+
+		<div class="form-message success">
+			<p>Polecenie wysłane. </p>
+		</div>		
+
+		<div class="additional-message valid-info">
+			<p>Aby polecić wyprawę, należy wypełnić pola obowiązkowe oznaczone gwiazdką.</p>
+		</div>
+
+		<div class="additional-message success ">
+<!-- 			<p>Zaczekaj na potwierdzenie swojej rezerwacji, odezwiemy się do Ciebie..</p> -->
+		</div>
+		
+
+		
+		<form action="/forms/share_send.php" class="form fields-medium">
+			<fieldset class="fields">
+				<div class="row">
+					<label>Twoje imię i nazwisko:</label>
+					
+					<span class="field">
+						<input type="text" name="name" placeholder="Wpisz imię i nazwisko" required />
+					</span>
+				</div>
+								
+				<div class="row">
+					<label>Adres e-mail znajomego:</label>
+					
+					<span class="field">
+						<input type="email" name="email" placeholder="Podaj e-mail znajomego" required />
+					</span>
+				</div>
+								
+				<div class="row submit">
+					<button type="submit" class="btn secondary">Wyślij</button>
+				</div>
+			</fieldset>
+		</form>
+	</div><!-- /form-reservation -->

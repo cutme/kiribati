@@ -1,0 +1,210 @@
+.team-excerpt {
+	@include background-size(cover);
+	float: left;
+	position: relative;
+	background-image: url('../img/team.png');
+	width: grid(545, $grid-base-width-home);
+	height: 245px;
+	padding: 30px 35px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		float: none;
+		width: 100%;
+		min-height: 245px;
+		margin-bottom: 80px;
+	}
+	
+	header {
+		margin-bottom: 25px;
+
+		h4 {
+			font-size: em(24);
+			
+			&:after {
+				vertical-align: top;
+				font-size: 20px;
+				content: ' »';
+				color: $red;
+			}
+		}
+	}
+	
+	.descriptions {
+		position: absolute; top: 80px; right: 0;
+		width: grid(240, 545);
+		
+		.info {
+			position: absolute; 
+			left: 0; top: 0;
+			width: 100%;
+			display: none;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				padding-right: 20px;
+			}
+			
+			&.intro {
+				display: block;
+				padding-top: 40px;
+				
+				@media screen and ( max-width: $tablet_landscape + px ) {
+					font-size: em(13);
+				}
+			}
+			
+			p {
+				@media screen and ( max-width: $tablet_landscape + px ) {
+					font-size: em(13);
+				}
+			}
+			
+			.name {
+				@include antialias;
+				display: block;
+				margin-bottom: 15px;
+				font: {
+					size: em(21);
+					weight: $bold;
+				}
+				color: $yellow;
+				
+				@media screen and ( max-width: $tablet_landscape + px ) {
+					font-size: em(18);
+				}
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					font-size: em(16);
+				}
+			}
+		}
+
+		.meet {
+			padding-top: 30px;
+
+			a {
+				@include antialias;
+				text-transform: uppercase;
+				font: {
+					size: em(13);
+					weight: $bold;
+				}
+				color: $red;
+				
+				&:after {
+					content: ' »';
+				}
+				
+				&:hover {
+					color: $yellow;
+				}
+			}
+			
+		}
+	}
+	
+	.members {
+		li {
+			@include border-radius(100%);
+			position: absolute;
+			z-index: 5;
+			background-color: $brown-mahogany;
+			cursor: pointer;
+			
+			img {
+				@include border-radius(100%);
+				@include hover;
+				object-fit: cover;
+			}
+			
+			&.size-1 {
+				width: 30px; height: 30px;
+			}
+			
+			&.size-2 {
+				width: 45px; height: 45px;
+			}
+			
+			&.size-3 {
+				width: 68px; height: 68px;
+			}
+			
+			&.face-1 {
+				top: 76px; left: grid(62, 545);
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: grid(32, 545);
+				}
+			}
+			
+			&.face-2 {
+				top: 76px; left: grid(152, 545);
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: grid(122, 545);
+				}
+			}
+			
+			&.face-3 {
+				top: 83px; left: grid(250, 545);
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: grid(220, 545);
+				}
+			}
+			
+			&.face-4 {
+				top: 150px; left: grid(137, 545);
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: grid(107, 545);
+				}
+			}
+			
+			&.face-5 {
+				top: 130px; left: grid(180, 545);
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: grid(150, 545);
+				}
+			}
+			
+			&.face-6 {
+				top: 186px; left: grid(84, 545);
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: grid(54, 545);
+				}
+			}
+			
+			&.face-7 {
+				top: 220px; left: grid(186, 545);
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: grid(156, 545);
+				}
+			}
+			
+			&.face-8 {
+				top: 205px; left: grid(250, 545);
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: grid(220, 545);
+				}
+			}
+			
+			&.face-9 {
+				top: 250px; left: grid(100, 545);
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: grid(70, 545);
+				}
+			}
+			
+			&:hover {
+				img {
+					@include opacity(.5);
+				}
+			}
+		}
+	}	
+}

@@ -1,0 +1,88 @@
+<div id="form-reservation-trip-on-request" class="mfp-holder">
+		<h2 class="main"></h2>
+	
+		<div class="summary">
+			<p>
+				<strong>Rezerwacja dla jednego uczestnika</strong>
+			</p>
+		</div>
+
+
+		<div class="form-message error">
+			<p>Rejestracja nie powiodła się. Uzupełnij pola.</p>
+		</div>
+
+		<div class="form-message success">
+			<p>Gratulacje! Pomyślnie zakończono proces rezerwacji. </p>
+		</div>		
+
+		<div class="additional-message valid-info visible">
+			<p>Aby złożyć rezerwację na wyprawę wystarczy wypełnić pola obowiązkowe oznaczone gwiazdką.</p>
+		</div>
+
+		<div class="additional-message success ">
+			<p>Zaczekaj na potwierdzenie swojej rezerwacji, odezwiemy się do Ciebie..</p>
+		</div>
+		
+
+		
+		<form action="/forms/reservation_trip_on_request_send.php" class="form fields-medium">
+			<fieldset class="fields">
+							
+				<div class="row">
+					<label>Adres email:</label>
+					
+					<span class="field">
+						<input type="email" name="email" placeholder="Wpisz adres e-mail" required />
+					</span>
+				</div>
+					
+				<div class="row">
+					<label>Czy uczestnik jest klubowiczem Kiribati Club?</label>
+	
+					<span class="field">
+						<input type="checkbox" name="kiribati_club" />
+					</span>
+				</div>
+				
+				<div class="row">
+					<label>Imię</label>
+					<span class="field">
+						<input type="text" name="imie" placeholder="Wpisz imię" required />
+					</span>
+				</div>
+				
+				<div class="row">
+					<label>Nazwisko</label>
+					<span class="field">
+						<input type="text" name="nazwisko" placeholder="Wpisz nazwisko" required />
+					</span>
+				</div>			
+				
+				<div class="row">
+					<label>Telefon kontaktowy</label>
+					<span class="field">
+						<input type="text" name="telefon" placeholder="Telefon kontaktowy" required />
+					</span>
+				</div>				
+				
+				<div class="row">
+					<label>Uwagi</label>
+					<span class="field">
+						<textarea name="uwagi"></textarea>
+					</span>
+				</div>
+												
+				<div class="row">
+					<label>Chcę otrzymywać newsletter</label>
+					<span class="field">
+						<input type="checkbox" name="newsletter" />
+					</span>
+				</div>
+			
+				<div class="row submit">
+					<button type="submit" class="btn secondary zzz">Rezerwuj</button>
+				</div>
+			</fieldset>
+		</form>
+	</div><!-- /form-reservation -->

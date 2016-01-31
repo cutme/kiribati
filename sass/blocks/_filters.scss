@@ -1,0 +1,74 @@
+.choose-color {
+	@include clear;
+	position: absolute; right: 305px; top: 0;
+	display: block;
+	background-color: $gray-gallery;
+	padding: 10px 0 10px 10px;
+	
+	@media screen and ( max-width: $grid-base-width + px ) {
+		right: 330px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		background-color: transparent;
+	}
+	
+	h5 {
+		float: left;
+		margin-right: 10px;
+		padding-top: 5px;
+		font-size: em(20);
+		cursor: pointer;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding-top: 8px;
+		    padding-left: 10px;
+		}
+	   
+		@media screen and ( max-width: $smartphone_landscape_small + px ) {
+			display: none;
+		}
+	   
+	}
+	
+	[class^="blog-color-"] {
+		float: left;
+		display: block;
+		width: 30px; height: 30px;
+		margin-right: 10px;
+		
+		&.active,
+		&:hover {
+			border: 2px solid white;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				border-color: $red;
+			}
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			@include border-radius( 50% );
+			width: 40px; height: 40px;
+		}
+	}
+	
+	.blog-color-1 {
+		background-color: $blog-color-1;
+	}
+	
+	.blog-color-2 {
+		background-color: $blog-color-2;
+	}
+	
+	.blog-color-3 {
+		background-color: $blog-color-3;
+	}
+	
+	.blog-color-4 {
+		background-color: $blog-color-4;
+	}
+	
+	.blog-color-5 {
+		background-color: $blog-color-5;
+	}
+}

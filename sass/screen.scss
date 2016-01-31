@@ -1,0 +1,58 @@
+// Compass imports
+@import "compass/reset";
+@import "compass/css3";
+
+// Custom includes
+@import "inc/variables";
+@import "inc/functions";
+@import "inc/mixins";
+@import "inc/fonts";
+@import "inc/icons";
+@import "inc/typography";
+@import "inc/scut";
+@import "inc/form";
+@import "inc/shared";
+@import "inc/buttons";
+@import "inc/select";
+@import "inc/checkbox";
+@import "inc/animate";
+@import "inc/magnific-popup";
+
+// Blocks includes
+@import "blocks/bottom";
+@import "blocks/breadcrumbs";
+@import "blocks/footer";
+@import "blocks/header-top";
+@import "blocks/nav-contact";
+@import "blocks/nav-footer";
+@import "blocks/nav-location";
+@import "blocks/nav-primary";
+@import "blocks/nav-secondary";
+@import "blocks/nav-simple";
+@import "blocks/nav-traveler";
+
+
+$legacy-support-for-ie7: true;
+$legacy-support-for-ie8: true;
+$experimental-support-for-svg: true;
+
+body {
+	background-color: white;
+}
+
+img {
+	position: relative; z-index: 5;
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+html { 
+	box-sizing: border-box; 
+}
+
+*, *:before, *:after { 
+	box-sizing: inherit;
+	outline: none;
+}
+

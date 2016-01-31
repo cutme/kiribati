@@ -1,0 +1,56 @@
+.last-places {	
+	position: relative;
+	display: block;
+	
+	@media screen and ( min-width: $tablet_portrait + px ) {
+		float: left;
+		width: grid(375, $grid-base-width-home);
+		height: 245px;
+		background-color: $gray-athens;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+		margin-bottom: 25px;
+	}
+	
+	h4 {
+		@include hover;
+		z-index: 10;
+		width: 100%;
+		background-color: $gray-athens;
+		font-size: em(24);
+		
+		@media screen and ( min-width: $tablet_portrait + px ) {
+			position: absolute;
+			left: 0; bottom: 0;
+			height: 72px;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+			padding: 20px;
+		}
+
+		span {
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			
+			@media screen and ( min-width: $tablet_portrait + px ) {
+				@include scut-center-transform(y);
+			}
+		}
+	}
+	
+	img {
+		@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+			width: 100%;
+		}
+	}
+	
+	&:hover {
+		h4 {
+			background-color: rgba( $brown, .8 );
+			color: $yellow;
+		}
+	}
+}

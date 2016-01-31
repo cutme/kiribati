@@ -1,0 +1,47 @@
+.nav-footer {
+	float: left;
+	position: relative; z-index: 15;
+	width: grid(290, $grid-base-width-home);
+	color: white;
+	
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		width: 50%;
+	}
+	
+	&.primary {
+		z-index: 20;
+	}
+
+	ul {
+		li {
+			position: relative; z-index: 10;
+
+			> a {
+				@include antialias;
+				@include opacity(.7);
+				display: inline-block;
+				padding: 3px 0;
+				text-transform: uppercase;
+				font: {
+					family: $dosis;
+					size: em(15);
+					weight: $bold;
+				}
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					padding: 0;
+				}
+				
+				@media screen and ( max-width: $smartphone_landscape_small + px ) {
+					font-size: em(12);
+				}
+				
+				&:hover {
+					@include opacity(1);
+					color: $yellow;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,151 @@
+.enquiry {
+	@include clear;
+	margin-bottom: 60px;
+	
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+	
+	h1.main {
+		@media screen and ( max-width: $grid-base-width + px ) {
+			padding-left: 0;
+		}
+	}
+	
+	h2 {
+		margin-bottom: 20px;
+		text-transform: none;
+		font-size: em(30);
+	}
+	
+	input[type=checkbox] {
+		margin-right: 0;
+	}
+	
+	p {
+		margin-bottom: 20px;
+		
+		a {
+			color: $red;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	.about-info {
+		label {
+			display: block;
+		}
+	}
+		
+	.details {
+		.row {
+			margin-bottom: 20px;			
+
+			> label {
+				display: block;
+				margin-bottom: 5px;
+				font-weight: $bold;
+			}
+			
+			@include input-placeholder {
+				@include opacity(.5);
+			}
+
+			.field {
+				&.medium {
+					width: grid(490);
+					
+					@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+						width: 100%;
+					}
+				}
+			}
+			
+			&.sex {
+				.field {
+					display: inline-block;
+					width: auto;
+					margin-right: 25px;
+				}
+			}
+		}
+	}
+	
+	.interview {
+		border-bottom: 1px solid #dededf;
+		margin-bottom: 15px;
+
+		.row {
+			margin-bottom: 25px;
+			
+			label {
+				float: left;
+				width: grid(525);
+				
+				@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+					float: none;
+					display: block;
+					width: 100%;
+					margin-bottom: 10px;
+				}
+		
+				.lead {
+					display: block;
+					margin-bottom: 10px;
+					font: {
+						family: $dosis;
+						size: em(20);
+						weight: $bold;
+					}
+					color: $red;
+				}
+				
+				p {
+					margin: 0;
+				}
+			}
+				
+			.field {
+				float: right;
+				width: grid(600);
+				margin-right: 0;
+				
+				@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+					float: none;
+					width: 100%;
+				}
+			}
+		}
+	}
+	
+	.policy {
+		margin-bottom: 20px;
+		font-size: em(13);
+		color: #aaa;
+	}
+	
+	.your-destination {
+		margin-bottom: 40px;
+		
+		strong {
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+	
+	.submit {
+		.btn {
+			padding: {
+				left: 30px;
+				right: 30px;
+			}
+		}
+	}
+}

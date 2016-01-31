@@ -1,0 +1,71 @@
+.register {
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+	
+	h1.main {
+		@media screen and ( max-width: $grid-base-width + px ) {
+			padding-left: 0;
+		}
+	}
+
+	h3 {
+		margin-bottom: 20px;
+		text-transform: none;
+		font-size: em(30);
+	}
+	
+	.additional-options {
+		@include clear;
+		margin-bottom: 30px;
+		
+		span.ui-checkbox {
+			margin-right: 10px;
+		}
+	}
+	
+	.column-medium {
+		.column-narrow {
+			width: grid(290, 780);
+			margin-bottom: 30px;
+			
+			@media screen and ( max-width: $smartphone_landscape_small + px ) {
+				@include clear;
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+	
+	.your-password {
+		width: grid(410, 780);
+		
+		@media screen and ( max-width: $smartphone_landscape_small + px ) {
+			@include clear;
+			float: none;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		
+		label {
+			float: left;
+			width: grid(170, 410);
+			padding-top: 10px;
+		}
+		
+		.field {
+			float: left;
+			width: grid(240, 410);
+		}
+	}
+	
+	> .column-narrow {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			display: none;
+		}
+	}
+}

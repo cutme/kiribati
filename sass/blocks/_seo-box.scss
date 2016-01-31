@@ -1,0 +1,57 @@
+.seo-box {
+	margin-bottom: 40px;
+
+	.image {
+		float: left;
+		width: grid(375, $grid-base-width-home);
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			float: none;
+			width: 100%;
+		}
+		
+		img {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: 100%;
+			}
+		}
+	}
+	
+	.description {
+		float: right;
+		width: grid(765, $grid-base-width-home);
+		padding-top: 20px;
+		
+		@media screen and ( max-width: $grid-base-width-home + px ) {
+			padding: 0 25px 0 0;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			float: none;
+			width: 100%;
+			padding: 25px;
+		}
+		
+		h2 {
+			margin-bottom: 20px;
+			text-transform: none;
+			font: {
+				family: $lato;
+				size: em(18);
+			}
+		}
+		
+		p {
+			margin-bottom: 10px;
+			font-size: em(14);
+		}
+		
+		a {
+			color: $red;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

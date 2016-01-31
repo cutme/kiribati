@@ -1,0 +1,124 @@
+.wrapper.contact {
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+	
+	h1.main {
+		@media screen and ( max-width: $grid-base-width + px ) {
+			padding: 0;
+		}
+	}
+
+	h4 {
+		margin-bottom: 20px;
+		text: {
+			align: left;
+			transform: none;
+		}
+		font: {
+			family: $lato;
+			size: em(18);
+		}
+	}
+	
+	p {
+		margin-bottom: 20px;
+		font-size: em(14);
+	}
+	
+	.contact-data {
+		@include clear;
+		width: 100%;
+		margin-bottom: 50px;
+		
+		address {
+			float: left;
+			width: 50%;
+			
+			p {
+				margin: 0;
+			}
+			
+			a {
+				&:hover {
+					color: $red;
+				}
+			}
+			
+			&.push-right {
+				text-align: right;
+			}
+		}
+	}
+	
+	.google-map {
+		width: 100%; height: 200px;
+		margin-bottom: 25px;
+		
+		&:last-of-type {
+			margin: 0;
+		}
+		
+		@media screen and ( max-width: $smartphone_landscape + px ) {
+			height: 300px;
+		}
+	}
+	
+	.intro {
+		width: grid(880);
+		margin-bottom: 40px;
+		
+		@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+			width: 100%;
+		}
+	}
+	
+	.column {
+		&.left {
+			float: left;
+			width: grid(390);
+			
+			@media screen and ( max-width: $tablet_landscape + px ) {
+				width: grid(490, $tablet_landscape);
+			}
+			
+			@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+				float: none;
+				width: 100%;
+			}
+		}
+		
+		&.right {
+			float: right;
+			width: grid(570);
+			
+			@media screen and ( max-width: $tablet_portrait - 1 + px ) {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+	
+	.write-to-us {
+		width: 100%;
+		
+		.captcha {
+			input[type=text] {
+				width: grid(240, 390);
+				float: right;
+			}
+			
+			label {
+				float: left;
+				width: grid(150, 390);
+				line-height: 40px;
+				padding-right: grid(10, 390);
+				text-align: right;
+			}
+		}
+	}
+}

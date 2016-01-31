@@ -1,0 +1,32 @@
+.breadcrumbs {
+	margin-bottom: 15px;
+	color: $gray;
+	
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: 0 25px;
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape + px ) {
+		font-size: em(12);
+	}
+	
+	@media screen and ( max-width: $smartphone_landscape_small + px ) {
+		padding: 0 10px;
+	}
+	
+	a {			
+		&:after {
+			margin: 0 12px;
+			content: '»';
+			color: $red;
+			
+			@media screen and ( max-width: $smartphone_landscape + px ) {
+				margin: 0 6px;
+			}
+		}
+		
+		&:hover {
+			color: $red;
+		}
+	}
+}

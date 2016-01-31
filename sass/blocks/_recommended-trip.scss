@@ -1,0 +1,18 @@
+.recommended-trip {
+	@include clear;
+	margin-bottom: 40px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		margin: 0;
+	}
+
+	header {
+		margin-bottom: 30px;
+		text-align: center;
+
+		h2 {
+			font-size: em(30);
+		}
+	}
+}
+

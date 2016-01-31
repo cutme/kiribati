@@ -1,0 +1,20 @@
+.ban-with-caption {
+	padding-bottom: 20px;
+	text-align: center;
+
+	figure {
+		margin-bottom: 15px;
+	}
+
+	h4 {
+		margin-bottom: 10px;
+		padding: 0 20px;
+		font-size: em(24);
+	}
+	
+	img {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 100%;
+		}
+	}
+}

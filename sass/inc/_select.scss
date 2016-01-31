@@ -1,0 +1,181 @@
+.sbHolder {
+	display: block;
+	position: relative; z-index: 30;
+	width: 100%; height: 50px;
+}
+
+.sbHolder:focus .sbSelector {
+	outline: none;
+}
+
+.sbSelector {
+	position: absolute; left: 0; top: 0;
+	display: block;
+	width: 100%; height: 50px;
+	background-color: $gray-gallery;
+	line-height: 50px;
+	outline: none;
+	overflow: hidden;
+	padding-left: 10px;
+	text-transform: uppercase;
+	font: {
+		family: $dosis;
+		size: em(20);
+		weight: $bold;
+	}
+	
+	&:link, &:visited, &:hover{
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+.sbToggle {
+	@include icomoon;
+	display: block;
+	position: absolute; right: 15px; top: 16px; z-index: 10;
+	font-size: em(14);
+
+	&:before {
+		content: "\e600";
+		color: $red;
+	}
+}
+
+.sbOptions {
+	position: absolute; top: 50px; left: 0; z-index: 1;
+	width: 100%;
+	background-color: white;
+	border: solid 1px $gray-iron;
+	overflow: auto !important;
+	padding: 10px;
+	
+	li {
+		padding: 0 7px;
+		
+		a, label {
+			display: block;
+			text-transform: uppercase;
+			font-family: $dosis;
+			outline: none;
+			cursor: pointer;
+			
+			&:hover {
+				color: $red;
+			}
+			
+			&.ui-checkbox-checked {
+				background-color: $red;
+				color: white;
+				
+				&.ui-checkbox-hover {
+					background-color: darken($red, 5%);
+				}
+			}
+		}		
+	}
+}
+
+.multiselect {
+	position: relative; z-index: 20;
+	width: 100%; height: 40px;
+	cursor: pointer;
+	
+	.selector {
+		height: 40px;
+		background-color: white;
+		border: 1px solid $gray-iron;
+		line-height: 40px;
+		padding: 0 20px;
+		text-transform: none;
+		font: {
+			family: $lato;
+			size: em(15);
+			weight: $regular;
+		}
+		color: #aaa;		
+	}
+	
+	.sbToggle {
+		position: absolute; right: 15px; top: 14px; z-index: 10;			
+	}
+
+	.sbOptions {
+		display: none;
+		top: 39px;
+		padding: 0;
+		max-height: 300px;
+		
+		li {
+			padding: 0;
+			
+			label {
+				padding: 5px 17px;
+			}
+			
+			&:first-child {
+				label {
+					padding-top: 10px;
+				}
+			}
+			
+			&:last-child {
+				label {
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+.white-select {
+	.sbHolder {
+		height: 40px;
+	}
+
+	.sbSelector {
+		height: 40px;
+		background-color: white;
+		border: 1px solid $gray-iron;
+		line-height: 40px;
+		padding: 0 20px;
+		text-transform: none;
+		font: {
+			family: $lato;
+			size: em(15);
+			weight: $regular;
+		}
+		color: #aaa;
+	}
+	
+	.sbOptions {
+		top: 40px;
+	}
+	
+	.sbToggle {
+		top: 14px;
+	}
+}
+
+.sbOptions a:link, .sbOptions a:visited {
+}
+
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+
+}
+
+.sbOptions li.last a {
+}
+
+.sbOptions .sbDisabled {
+}
+
+.sbOptions .sbGroup {
+}
+
+.sbOptions .sbSub {
+}
+

@@ -1,0 +1,43 @@
+#bottom {
+	margin-bottom: 25px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		display: none;
+	}
+
+	.partners {
+		float: left;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 50%;
+			white-space: nowrap;
+		}
+		
+		
+		@media screen and ( max-width: $grid-base-width-home + px ) {
+			padding-left: 25px;
+		}
+		
+		h4 {
+			display: inline-block;
+			padding-right: 35px;
+			line-height: 60px;
+			text-transform: uppercase;
+			font-weight: $bold;
+			vertical-align: text-bottom;
+			
+			@media screen and ( max-width: $tablet_landscape + px ) {
+				display: none;
+			}
+		}
+		
+		.logo {
+			display: inline-block;
+			margin-right: 15px;
+		}
+		
+		&.right {
+			float: right;
+		}
+	}
+}

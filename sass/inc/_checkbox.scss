@@ -1,0 +1,69 @@
+.ui-radio-state-disabled,
+.ui-radio-state-checked-disabled,
+.ui-radio-state-disabled-hover,
+.ui-radio-state-checked-disabled-hover { color: #999; }
+
+span.ui-checkbox,
+span.ui-radio {
+	display: block;
+	float: left;
+	width: 13px; height: 13px;
+	background-color: white;
+	border: 1px solid #bfbfbf;
+	margin-top: 4px;
+	text-align: center;
+    font-size: 7px;
+}
+
+span.ui-checkbox {
+	@include icomoon;
+	@include border-radius( 4px );
+	line-height: 1.3;
+
+	&:before {
+	    display: none;
+	    content: "\e60f";
+		color: white;
+    }
+}
+
+span.ui-radio {
+	@include border-radius( 100% );
+	
+} // radio off
+
+span.ui-helper-hidden {
+	display: none;
+}
+
+span.ui-checkbox-state-checked {
+	background-color: $blue-dodger;
+	border-color: $blue-dodger;
+	
+	&:before {
+		display: block;
+	}
+}
+
+span.ui-checkbox-state-checked-hover {
+	background-color: $blue-dodger;
+	border-color: $blue-dodger;
+	
+	&:before {
+		display: block;
+	}
+}
+
+span.ui-radio-state-checked-disabled {
+	
+}
+
+span.ui-radio-state-checked,
+span.ui-radio-state-checked-hover {
+	border: 5px solid $blue-dodger;
+} // radio on
+
+.ui-helper-hidden-accessible {
+	position: absolute;
+	left: -999em;
+}
