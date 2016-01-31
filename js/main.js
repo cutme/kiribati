@@ -13,7 +13,7 @@ function debouncer( func , timeout ) {
 jQuery(function($) {
 
 	var path = '',
-		test = false,
+		test = true,
 		term_id = '';
 		
 		

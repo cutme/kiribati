@@ -1,5 +1,5 @@
-//path = '';
-path = '/_szablony_/public/'
+path = '';
+//path = '/_szablony_/public/'
 
 head.js('//code.jquery.com/jquery-1.11.1.min.js', function() {
 		if ($('.isotope').length > 0) {
