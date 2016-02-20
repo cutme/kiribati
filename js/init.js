@@ -57,5 +57,7 @@ head.js('//code.jquery.com/jquery-1.11.1.min.js', function() {
 if (head.browser.ie && parseFloat(head.browser.version) < 9) {
     head.js('//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js')
     	.js('//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js')
-    	.js('//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js');
+    	.js('//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js')
+    	.js('//cdnjs.cloudflare.com/ajax/libs/flexibility/1.0.6/flexibility.js');
+    	
 }
