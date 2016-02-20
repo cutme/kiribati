@@ -53,4 +53,49 @@
 			color: $yellow;
 		}
 	}
+	
+	&.single {
+		
+		margin-right: grid(22, $grid-base-width-home);
+		overflow: hidden;
+		
+		&:last-of-type {
+			margin-right: 0;
+		}
+		
+		.text {
+			@include transition-property(all);
+			@include transition-duration(300ms);
+			@include transition-timing-function(ease-in-out);
+			position: absolute; z-index: 15;
+			left: 0; top: -100%;
+			width: 100%; height: 100%;
+			background-color: rgba($yellow, .95);
+			padding: 30px;
+			
+			h5 {
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				font: {
+					family: $dosis;
+					weight: $bold;
+					size: em(24);
+				}
+			}
+		}
+
+		&.with-text {
+			&:hover {
+				h4 {
+					background-color: $gray-athens;
+					color: inherit;
+				}
+				
+				.text {
+					top: 0;
+				}
+			}
+		}
+	}
 }
+
